@@ -155,3 +155,78 @@ Port: 19132
 **BeerMc 小游戏**
 地址: beermc.com
 端口: 19132
+
+## Українська мова
+
+* Одне ядро для загального управління.
+* Це ядро є неофіційна версія PocketMine-MP модифіковане DREAM STUDIO та iTX Technologies LLC.
+* Genisys є розгалуженням PocketMine-MP і весь оригінальний код був написаний PocketMine Team.
+* [Завантажити PHP7 для Genisys](https://github.com/iTXTech/PHP-Genisys/)
+* [Завантажити Genisys Installer для Windows](https://raw.githubusercontent.com/iTXTech/Genisys-Installer/master/setup.exe)
+* Почувайтеся вільно щоб стартувати запит на зміну або проблему. Дозволена англійська та китайська мова. Розмовляйте англійською для розуміння з багатьма людьми.
+
+### Список вдячності
+* Деякі особливості були запозичені від **@boybook** **FCCore**
+* Голови і глечик були взяті з **@ImagicalCorp** ImagicalMine роботи
+* AIs are based on **@Zzm317**'s amazing MyOwnWorld.
+* Painting and Brewing Stand are translated from **Nukkit** Project
+* Furnace was fixed by **@MagicDroidX**
+* Rail and Powered Rails were written by **@happy163**
+* Nether door was written by **JJLeo**
+* Base food system is based on **Katana**
+* Base weather system was written by **@Zzm317** and rewritten by **@PeratX**
+* **@FENGberd**'s encouragement
+* Our leaders are **@ishitatsuyuki** and **@jasonczc**
+
+### License
+Most codes are made by PocketMine team and licensed under GPLv3. Some AI is proprietary, copy is prohibited.
+
+### Official Development Documentation
+[Genisys Official Development Documentation Page](http://docs.mcper.cn/en-US/)
+
+### Features
+* Performance optimization (Let 100+ players join in a server)
+* Bug fix in PocketMine-MP
+* Weather
+* Experience
+* More Effects
+* Redstone (Button, Lever, PressurePlate, RedstoneWire, RedstoneTorch and so on)
+* Nether (Red sky!)
+* Rail & Powered Rail
+* Minecart (can't follow rails)
+* Boat
+* More Doors
+* Potions
+* Splash Potions
+* Anvil
+* Better Crafting
+* Better Inventory
+* More Items
+* Hunger (Based on Katana)
+* AI (Based on MOW)
+* More commands (bancid bancidbyname banipbyname ms extractplugin makeplugin
+  pardoncid weather extractphar loadplugin lvdat biome xp setblock fill summon)
+* With FolderPluginLoader
+* Monster Spawner
+* Item Frame
+* Dispenser and Dropper
+* Colorful Sheep
+* Different types of Boat, Villager and Rabbit
+* Enchantment
+* Brewing
+* NOTICE: Please edit **genisys.yml** to enable all the features, including Redstone, MobAI, Nether and so on.
+
+### To-Do List
+* Improve Potions
+* Improve Redstone
+* Improve Anvil
+* Fishing
+* New AI for all creatures
+* LevelDB support for Windows
+
+### Servers
+(Follows are the test servers built by us. In fact other servers used Genisys may be more professional than ours.)
+
+**Beer MC (A mini-game server)**
+Address: beermc.com
+Port: 19132
