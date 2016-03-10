@@ -1,0 +1,18 @@
+image: itxtech/docker-env-genisys
+
+stages:
+ - test
+
+before_script:
+ - mkdir plugins
+
+package:
+  stage: test
+  script:
+   - php tests/Travis.php
+  only:
+   - master
+  artifacts:
+    paths:
+     - plugins/PocketMine-iTX/Genisys*.phar
+

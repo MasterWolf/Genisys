@@ -21,6 +21,7 @@
 
 namespace pocketmine\level\generator\normal\biome;
 
+use pocketmine\block\Block;
 use pocketmine\level\generator\populator\TallGrass;
 
 class RiverBiome extends GrassyBiome{

@@ -3,8 +3,8 @@
  * Author: PeratX
  * QQ: 1215714524
  * Time: 2016/1/19 15:46
- * Copyright(C) 2011-2016 iTX Technologies LLC.
- * All rights reserved.
+
+
  *
  * OpenGenisys Project
  */
@@ -12,6 +12,7 @@
 namespace pocketmine\tile;
 
 use pocketmine\entity\Entity;
+use pocketmine\event\entity\EntityGenerateEvent;
 use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
@@ -23,11 +24,11 @@ use pocketmine\nbt\tag\StringTag;
 use pocketmine\level\format\FullChunk;
 use pocketmine\Player;
 
-class MobSpawner extends Spawnable implements Nameable{
+class MobSpawner extends Spawnable{
 
 	public function __construct(FullChunk $chunk, CompoundTag $nbt){
 		if(!isset($nbt->EntityId)){
-			$nbt->Data = new IntTag("EntityId", 0);
+			$nbt->EntityId = new IntTag("EntityId", 0);
 		}
 		parent::__construct($chunk, $nbt);
 		$this->lastUpdate = $this->getLevel()->getServer()->getTick();
@@ -49,20 +50,7 @@ class MobSpawner extends Spawnable implements Nameable{
 	}
 
 	public function getName() : string{
-		return isset($this->namedtag->CustomName) ? $this->namedtag->CustomName->getValue() : "Monster Spawner";
-	}
-
-	public function hasName(){
-		return isset($this->namedtag->CustomName);
-	}
-
-	public function setName($str){
-		if($str === ""){
-			unset($this->namedtag->CustomName);
-			return;
-		}
-
-		$this->namedtag->CustomName = new StringTag("CustomName", $str);
+		return "Monster Spawner";
 	}
 
 	public function canUpdate() : bool{
@@ -110,8 +98,8 @@ class MobSpawner extends Spawnable implements Nameable{
 							new FloatTag("", 0)
 						]),
 					]);
-					$entity = Entity::createEntity($this->getEntityId(), $this->chunk, $nbt);
-					$entity->spawnToAll();
+					$this->getLevel()->getServer()->getPluginManager()->callEvent($ev = new EntityGenerateEvent($entity = Entity::createEntity($this->getEntityId(), $this->chunk, $nbt), EntityGenerateEvent::CAUSE_MOB_SPAWNER));
+					if(!$ev->isCancelled()) $entity->spawnToAll();
 				}
 			}
 		}
@@ -129,10 +117,6 @@ class MobSpawner extends Spawnable implements Nameable{
 			new IntTag("z", (int) $this->z),
 			new IntTag("EntityId", (int) $this->getEntityId())
 		]);
-
-		if($this->hasName()){
-			$c->CustomName = $this->namedtag->CustomName;
-		}
 
 		return $c;
 	}
