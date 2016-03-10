@@ -168,18 +168,18 @@ Port: 19132
 ### Список вдячності
 * Деякі особливості були запозичені від **@boybook** **FCCore**
 * Голови і глечик були взяті з **@ImagicalCorp** ImagicalMine роботи
-* AIs are based on **@Zzm317**'s amazing MyOwnWorld.
-* Painting and Brewing Stand are translated from **Nukkit** Project
-* Furnace was fixed by **@MagicDroidX**
-* Rail and Powered Rails were written by **@happy163**
-* Nether door was written by **JJLeo**
-* Base food system is based on **Katana**
-* Base weather system was written by **@Zzm317** and rewritten by **@PeratX**
-* **@FENGberd**'s encouragement
-* Our leaders are **@ishitatsuyuki** and **@jasonczc**
+* AI були взяті з **@Zzm317** чудового MyOwnWorld.
+* Картини і варочна стойка були перекладені з **Nukkit** проекту
+* Піч виправлена **@MagicDroidX**
+* Колія і енергетична колія була написана **@happy163**
+* Двері нижнього світу були написані **JJLeo**
+* Система їди базується на **Katana**
+* Система погоди була написана **@Zzm317** і переписана **@PeratX**
+* **@FENGberd** заохочення
+* Наші лідери - **@ishitatsuyuki** та **@jasonczc**
 
-### License
-Most codes are made by PocketMine team and licensed under GPLv3. Some AI is proprietary, copy is prohibited.
+### Ліцензія
+Більша частина коду була розроблена командою PocketMine з ліцензією GPLv3. Деякі AI є власністю, копія є забороненою.
 
 ### Official Development Documentation
 [Genisys Official Development Documentation Page](http://docs.mcper.cn/en-US/)
